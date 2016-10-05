@@ -1,5 +1,5 @@
 #include "Point3D.hpp"
-
+//using g++ compiler on linux
 
 double Point3D::getX()
 {
@@ -25,12 +25,20 @@ void Point3D::setX(double x)
 }
 
 
-Point3D& Point3D :: addPoints(const Point3D &p)
+Point3D& Point3D::addPoints(const Point3D &p)
 {
 	this->x += p.x;
 	this->y += p.y;
 	this->z += p.z;
 	return (*this);
 
+}
+
+Point3D& Point3D::subtractPoints(const Point3D &p)
+{
+	this-> -= p.x;
+	this-> -= p.y;
+	this-> -= p.z;
+	return (*this);
 
 }

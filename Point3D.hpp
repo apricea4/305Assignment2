@@ -1,21 +1,22 @@
+//using c++ compiler linux  used makefile
+#ifndef POINT3D_HPP
+#define POINT3D_HPP
 #include <iostream>
+#include <cmath>
 using namespace std;
 class Point3D
 {
-	double x;
-	double y;
-	double z;
+		double x;
+		double y;
+		double z;
 	public:
 		Point3D(): x{0},y{0},z{0} {}; //uniform initialize
 
 
 
-		Point3D(double x, double y, double z)://explicit value constructor
-		x(x),y(y),z(z)
+		Point3D(double x, double y, double z): x(x),y(y),z(z) //explicit value constructor
 		{
 			cout<<"made point: "<<x<<y<<z<<endl;
-
-
 
 		}
 		double getX();
@@ -31,6 +32,7 @@ class Point3D
 		Point3D &subtractPoints(const Point3D &p);
 		double multiplyPoints(const Point3D &p);
 		double squarePoints();
+		void printPoints();
 
 		~Point3D()
 		{
@@ -42,3 +44,4 @@ class Point3D
 
 
 };
+#endif
